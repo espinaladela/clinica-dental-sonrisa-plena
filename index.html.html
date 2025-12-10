@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica Dental Sonrisa Plena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica Dental Sonrisa Plena - Cuidamos tu sonrisa con profesionales especializados, tecnología moderna y atención personalizada. Reserva tu cita hoy.">
+
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --azul: #2D9CDB;
+            --verde: #6FCF97;
+            --gris-claro: #F2F2F2;
+            --gris-oscuro: #4F4F4F;
+            --blanco: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gris-oscuro);
+            background-color: var(--blanco);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Layout base */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--blanco);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, var(--azul), var(--verde));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+
+        .logo-text-main {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--azul);
+        }
+
+        .logo-text-sub {
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        nav li a {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        nav li a:hover {
+            color: var(--azul);
+        }
+
+        .btn-primary {
+            background-color: var(--azul);
+            color: var(--blanco);
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            filter: brightness(1.05);
+        }
+
+        .btn-secondary {
+            background-color: var(--blanco);
+            color: var(--azul);
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--azul);
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background-color: #E9F6FF;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 3rem 0 2rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background-color: #E9F6FF;
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: var(--azul);
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #222;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            margin-bottom: 1.4rem;
+            color: #555;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-info {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .hero-img {
+            background: linear-gradient(145deg, #E9F6FF, #F5FFFA);
+            border-radius: 20px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-img-inner {
+            border-radius: 16px;
+            background: radial-gradient(circle at 30% 30%, var(--azul), var(--verde));
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .hero-img-inner h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-img-inner p {
+            font-size: 0.9rem;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Secciones generales */
+        section {
+            padding: 3rem 0;
+        }
+
+        section:nth-of-type(odd) {
+            background-color: var(--gris-claro);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.7rem;
+            margin-bottom: 0.3rem;
+            color: #222;
+        }
+
+        .section-header p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* Sobre nosotros */
+        .about {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .about-card {
+            background-color: var(--blanco);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+        }
+
+        .about-tag {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--azul);
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .about h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .about p {
+            font-size: 0.95rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 0.8rem;
+            margin-top: 0.6rem;
+        }
+
+        .chip {
+            background-color: #E9F6FF;
+            color: #333;
+            border-radius: 999px;
+            padding: 0.35rem 0.8rem;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .team-card {
+            background-color: var(--blanco);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+        }
+
+        .team-member {
+            margin-bottom: 1rem;
+        }
+
+        .team-member h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .team-member span {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background-color: var(--blanco);
+            border-radius: 14px;
+            padding: 1.3rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .service-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--azul);
+            margin-bottom: 0.3rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-meta {
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* Testimonios */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 1.2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--blanco);
+            border-radius: 14px;
+            padding: 1.1rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-text {
+            margin-bottom: 0.7rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* FAQ */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--blanco);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+        }
+
+        /* Blog */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 1.3rem;
+        }
+
+        .blog-card {
+            background-color: var(--blanco);
+            border-radius: 14px;
+            padding: 1.2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            font-size: 0.9rem;
+        }
+
+        .blog-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--verde);
+            margin-bottom: 0.2rem;
+        }
+
+        .blog-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .blog-meta {
+            font-size: 0.75rem;
+            color: #999;
+            margin-bottom: 0.4rem;
+        }
+
+        /* Contacto */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .contact-form {
+            background-color: var(--blanco);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+        }
+
+        .contact-form h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 0.9rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.6rem 0.7rem;
+            border-radius: 8px;
+            border: 1px solid #DDD;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+        }
+
+        .contact-info h4 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.3rem;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            background-color: #E9F6FF;
+            color: #333;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #101828;
+            color: #E5E7EB;
+            padding: 1.8rem 0;
+            font-size: 0.85rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .footer-left h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .footer-left p {
+            color: #9CA3AF;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .footer-links a {
+            margin-left: 0.8rem;
+            color: #9CA3AF;
+            font-size: 0.85rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--blanco);
+        }
+
+        /* Botón flotante WhatsApp (solo diseño ejemplo) */
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 999px;
+            padding: 0.7rem 1.1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-whatsapp span {
+            font-size: 1.1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .about,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .testimonials-grid,
+            .blog-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+
+            .footer-right {
+                text-align: left;
+            }
+
+            nav ul {
+                display: none; /* versión simple sin menú hamburguesa para la tarea */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid,
+            .testimonials-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .btn-whatsapp {
+                padding: 0.6rem 0.9rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER / NAV -->
+    <header>
+        <div class="container navbar" aria-label="Barra de navegación principal">
+            <div class="logo">
+                <div class="logo-icon" aria-hidden="true">S</div>
+                <div>
+                    <div class="logo-text-main">Sonrisa Plena</div>
+                    <div class="logo-text-sub">Clínica Dental</div>
+                </div>
+            </div>
+            <nav aria-label="Secciones del sitio">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#contacto" class="btn-primary">Reserva tu cita</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="inicio">
+        <section>
+            <div class="container hero">
+                <div>
+                    <div class="hero-badge" aria-label="Clínica dental en República Dominicana">
+                        🦷 Cuidamos tu sonrisa, cuidamos de ti
+                    </div>
+                    <h1 class="hero-title">Tu sonrisa, nuestra prioridad</h1>
+                    <p class="hero-subtitle">
+                        En <strong>Clínica Dental Sonrisa Plena</strong> combinamos experiencia,
+                        tecnología y un trato humano para que tu visita al dentista sea cómoda,
+                        segura y libre de estrés.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contacto" class="btn-primary">Agendar cita</a>
+                        <a href="#servicios" class="btn-secondary">Ver servicios</a>
+                    </div>
+                    <p class="hero-info">
+                        Horario: Lunes a viernes 8:00 a.m. – 6:00 p.m. · Sábados 9:00 a.m. – 1:00 p.m.
+                    </p>
+                </div>
+                <div class="hero-img" aria-hidden="true">
+                    <div class="hero-img-inner">
+                        <div>
+                            <h2>Odontología integral</h2>
+                            <p>Prevención, estética y rehabilitación oral en un solo lugar, con un equipo que te acompaña en cada paso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE NOSOTROS -->
+        <section id="sobre-nosotros">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sobre nosotros</h2>
+                    <p>Una clínica cercana, profesional y centrada en la experiencia del paciente.</p>
+                </div>
+
+                <div class="about">
+                    <article class="about-card">
+                        <p class="about-tag">Nuestra historia</p>
+                        <h3>Una clínica diseñada para que vuelvas sin miedo al dentista</h3>
+                        <p>
+                            En <strong>Clínica Dental Sonrisa Plena</strong> creemos que una sonrisa sana puede cambiar la forma
+                            en que te ves y te relacionas con el mundo. Somos un equipo de odontólogos apasionados por la salud bucal,
+                            con formación en odontología general, ortodoncia, estética dental y odontopediatría.
+                        </p>
+                        <p>
+                            Nuestra misión es ofrecer tratamientos integrales y personalizados, con altos estándares de calidad, ética profesional
+                            y calidez humana. Nuestra visión es convertirnos en la clínica dental de referencia en la ciudad, reconocida por su
+                            innovación, trato cercano y resultados confiables.
+                        </p>
+                        <p>Trabajamos cada día bajo valores como:</p>
+                        <div class="about-values" aria-label="Valores de la clínica">
+                            <span class="chip">🤝 Respeto</span>
+                            <span class="chip">✅ Honestidad</span>
+                            <span class="chip">🎯 Responsabilidad</span>
+                            <span class="chip">❤ Empatía</span>
+                        </div>
+                    </article>
+
+                    <aside class="team-card" aria-label="Equipo odontológico">
+                        <h3>Conoce a nuestro equipo</h3>
+
+                        <div class="team-member">
+                            <h4>Dra. Escarlet Jimeno</h4>
+                            <span>Odontóloga General · Estética dental</span>
+                            <p>Más de 8 años de experiencia en rehabilitación oral y diseño de sonrisa, enfocada en resultados naturales.</p>
+                        </div>
+
+                        <div class="team-member">
+                            <h4>Dr. Carlos Ramírez</h4>
+                            <span>Especialista en Ortodoncia</span>
+                            <p>Brackets metálicos, estéticos y ortodoncia invisible para alinear tu sonrisa con un plan adaptado a ti.</p>
+                        </div>
+
+                        <div class="team-member">
+                            <h4>Dra. Adela Espinal</h4>
+                            <span>Odontopediatra</span>
+                            <p>Atención especializada para niños, con un enfoque lúdico y respetuoso para que pierdan el miedo al dentista.</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Servicios odontológicos</h2>
+                    <p>Tratamientos pensados para cada etapa de tu sonrisa.</p>
+                </div>
+
+                <div class="services-grid" aria-label="Listado de servicios">
+                    <article class="service-card">
+                        <p class="service-tag">Odontología general</p>
+                        <h3>Limpieza dental profesional</h3>
+                        <p>
+                            Eliminamos placa y sarro que el cepillado no alcanza, ayudando a prevenir caries, enfermedades de encías
+                            y mal aliento.
+                        </p>
+                        <p class="service-meta">Recomendado cada 6 meses o según evaluación.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <p class="service-tag">Odontología general</p>
+                        <h3>Restauraciones (empastes)</h3>
+                        <p>
+                            Tratamientos para caries con materiales estéticos que se integran con el color natural de tus dientes.
+                        </p>
+                        <p class="service-meta">Protege tu pieza dental y evita daños mayores.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <p class="service-tag">Estética dental</p>
+                        <h3>Blanqueamiento dental</h3>
+                        <p>
+                            Procedimientos seguros y supervisados para aclarar el tono de tus dientes y lograr una sonrisa más luminosa.
+                        </p>
+                        <p class="service-meta">Incluye evaluación previa para asegurar tu salud bucal.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <p class="service-tag">Estética dental</p>
+                        <h3>Carillas dentales</h3>
+                        <p>
+                            Corrige color, forma y pequeñas imperfecciones con carillas de resina o porcelana, diseñadas a tu medida.
+                        </p>
+                        <p class="service-meta">Resultados naturales y armoniosos.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <p class="service-tag">Ortodoncia</p>
+                        <h3>Brackets metálicos y estéticos</h3>
+                        <p>
+                            Tratamientos de ortodoncia para alinear dientes, mejorar mordida y cuidar la salud funcional de tu sonrisa.
+                        </p>
+                        <p class="service-meta">Planes de pago flexibles según tu caso.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <p class="service-tag">Odontopediatría</p>
+                        <h3>Atención dental infantil</h3>
+                        <p>
+                            Consultas adaptadas a niños, sellantes, aplicación de flúor y educación en higiene oral desde temprana edad.
+                        </p>
+                        <p class="service-meta">Ambiente cálido y respetuoso para los más pequeños.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section id="testimonios">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Testimonios de pacientes</h2>
+                    <p>Historias reales de personas que confiaron en nosotros.</p>
+                </div>
+
+                <div class="testimonials-grid" aria-label="Reseñas de pacientes">
+                    <article class="testimonial-card">
+                        <p class="testimonial-text">
+                            “Tenía mucho miedo a ir al dentista, pero el equipo de Sonrisa Plena me explicó todo con calma.
+                            Hoy voy a mis limpiezas sin estrés y mi sonrisa nunca se había visto mejor.”
+                        </p>
+                        <p class="testimonial-author">Ana M.</p>
+                        <p class="testimonial-role">Paciente de limpieza y blanqueamiento</p>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <p class="testimonial-text">
+                            “Llevé a mi hijo de 7 años a su primera consulta y salimos encantados. La doctora fue muy paciente
+                            y convirtió la experiencia en un juego. Ahora él mismo me recuerda la próxima cita.”
+                        </p>
+                        <p class="testimonial-author">Roberto G.</p>
+                        <p class="testimonial-role">Papá de paciente infantil</p>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <p class="testimonial-text">
+                            “Empecé tratamiento de ortodoncia y desde el inicio sentí acompañamiento. Me explicaron cada etapa y
+                            pude elegir entre brackets estéticos y metálicos según mi presupuesto.”
+                        </p>
+                        <p class="testimonial-author">Lucía P.</p>
+                        <p class="testimonial-role">Paciente de ortodoncia</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Preguntas frecuentes</h2>
+                    <p>Respondemos las dudas más comunes antes de tu primera visita.</p>
+                </div>
+
+                <div class="faq-grid" aria-label="Preguntas frecuentes sobre la clínica">
+                    <article class="faq-item">
+                        <h3>¿Cada cuánto debo hacerme una limpieza dental?</h3>
+                        <p>
+                            Lo ideal es realizar una limpieza profesional cada 6 meses. Sin embargo, la frecuencia puede variar
+                            según tu historial clínico y recomendaciones del odontólogo.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>¿El blanqueamiento dental duele?</h3>
+                        <p>
+                            Algunos pacientes pueden presentar sensibilidad leve y temporal. Por eso realizamos una evaluación previa
+                            y utilizamos productos seguros y supervisados para reducir molestias.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>¿Atienden emergencias dentales?</h3>
+                        <p>
+                            Sí. Contamos con atención de urgencias para dolor intenso, fracturas y otros eventos que requieran
+                            asistencia rápida. Puedes llamarnos o escribirnos por WhatsApp para coordinar.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>¿Aceptan seguros médicos?</h3>
+                        <p>
+                            Trabajamos con varios seguros odontológicos. Contáctanos para confirmar si tu póliza aplica y qué
+                            servicios cubre tu plan.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>¿Desde qué edad puede venir un niño a consulta?</h3>
+                        <p>
+                            Recomendamos que la primera visita sea alrededor del primer año de vida, o cuando salgan los primeros dientes,
+                            para orientar a la familia sobre higiene y prevención.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section id="blog">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Consejos para tu sonrisa</h2>
+                    <p>Educamos a nuestros pacientes para que su salud oral se mantenga día a día.</p>
+                </div>
+
+                <div class="blog-grid" aria-label="Entradas de blog sobre salud dental">
+                    <article class="blog-card">
+                        <p class="blog-tag">Higiene diaria</p>
+                        <h3>5 hábitos para una sonrisa más sana</h3>
+                        <p class="blog-meta">Publicado el 10 de diciembre de 2025</p>
+                        <p>
+                            Cepillarte al menos dos veces al día, usar hilo dental, elegir un buen enjuague y acudir a tus limpiezas
+                            semestrales son claves para mantener tus dientes y encías en óptimas condiciones.
+                        </p>
+                    </article>
+
+                    <article class="blog-card">
+                        <p class="blog-tag">Mitos y realidades</p>
+                        <h3>¿El blanqueamiento daña los dientes?</h3>
+                        <p class="blog-meta">Publicado el 3 de diciembre de 2025</p>
+                        <p>
+                            Cuando se realiza bajo supervisión profesional y con productos adecuados, el blanqueamiento es un
+                            procedimiento seguro. Lo importante es evitar remedios caseros agresivos.
+                        </p>
+                    </article>
+
+                    <article class="blog-card">
+                        <p class="blog-tag">Niños</p>
+                        <h3>Primera visita al dentista: cómo prepararlos</h3>
+                        <p class="blog-meta">Publicado el 25 de noviembre de 2025</p>
+                        <p>
+                            Hablar del dentista en positivo, evitar amenazas y acompañar con calma ayuda a que los niños vivan
+                            su primera consulta como una experiencia segura y sin miedo.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contacto y citas</h2>
+                    <p>Agenda tu próxima consulta en pocos pasos.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <form class="contact-form" aria-label="Formulario para solicitar una cita">
+                        <span class="badge">Formulario de cita</span>
+                        <h3>Envíanos tu solicitud</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                            Completa el formulario y nuestro equipo se pondrá en contacto contigo para confirmar la fecha y hora de tu cita.
+                        </p>
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana María López">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ej. +1 (809) 000-0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="Ej. ejemplo@correo.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivo">Motivo de la cita</label>
+                            <select id="motivo" name="motivo">
+                                <option value="">Selecciona una opción</option>
+                                <option value="limpieza">Limpieza dental</option>
+                                <option value="evaluacion">Evaluación general</option>
+                                <option value="dolor">Dolor / urgencia</option>
+                                <option value="ortodoncia">Ortodoncia</option>
+                                <option value="estetica">Estética dental</option>
+                                <option value="ninos">Consulta para niño/a</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fecha">Fecha tentativa</label>
+                            <input type="date" id="fecha" name="fecha">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje adicional</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué necesitas."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Enviar solicitud</button>
+                        <p style="font-size: 0.8rem; color:#777; margin-top:0.5rem;">
+                           
+                        </p>
+                    </form>
+
+                    <aside class="contact-info" aria-label="Información de contacto de la clínica">
+                        <h4>Información de la clínica</h4>
+                        <p>📍 <strong>Dirección:</strong> 1/2, Av. John F. Kennedy 7, Santo Domingo 10203, Ciudad.</p>
+                        <p>📞 <strong>Teléfono:</strong> (829) 820-7123</p>
+                        <p>💬 <strong>WhatsApp:</strong> +1 (849) 206 2003</p>
+                        <p>✉ <strong>Correo:</strong> contacto@sonrisaplena.com</p>
+
+                        <h4 style="margin-top:1rem;">Horario de atención</h4>
+                        <ul class="contact-list">
+                            <li>Lunes a viernes: 8:00 a.m. – 6:00 p.m.</li>
+                            <li>Sábados: 9:00 a.m. – 1:00 p.m.</li>
+                            <li>Domingos y feriados: cerrado</li>
+                        </ul>
+
+                        <h4>Ubicación</h4>
+                        <p style="font-size:0.85rem; color:#777;">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9691.141554543057!2d-69.95883522926154!3d18.483929974736768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89f362e578d3%3A0x19d59fe09af95898!2sUniversidad%20Nacional%20Pedro%20Henr%C3%ADquez%20Ure%C3%B1a!5e0!3m2!1sen!2sdo!4v1765331917478!5m2!1sen!2sdo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <h3>Clínica Dental Sonrisa Plena</h3>
+                <p>© 2025. Todos los derechos reservados. Este sitio fue desarrollado como proyecto académico integrando el uso de herramientas de IA.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante (ejemplo) -->
+    <a href="#contacto" class="btn-whatsapp" aria-label="Contactar por WhatsApp (demostrativo)">
+        <span>💬</span> WhatsApp
+    </a>
+</body>
+</html>
